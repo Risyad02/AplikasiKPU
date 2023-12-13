@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:text="Form Edit">
+        </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NIK"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/txNomorNik_Edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Lengkap"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/txNama_Edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nomor HP"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/txNomorhp_Edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jenis Kelamin"
+            android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/spJK_Edit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:entries="@array/jenis_kelamin"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/txTanggal_Edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences"/>
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat"
+            android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/txAlamat_Edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences"/>
+        <Button
+            android:id="@+id/btnGetLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tambah Lokasi"
+            android:layout_gravity="end"
+            android:onClick="getLocation"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text="Gambar">
+        </TextView>
+        <Button
+            android:id="@+id/btnChoosePhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Photo"
+            android:layout_centerInParent="true"
+            android:onClick="selectPhoto" />
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_below="@id/btnChoosePhoto"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_launcher_foreground"
+            android:scaleType="centerCrop" />
+    </LinearLayout>
+</ScrollView>
